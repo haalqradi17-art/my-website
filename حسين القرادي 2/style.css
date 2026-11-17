@@ -1,0 +1,222 @@
+/* إعدادات المتغيرات والألوان الأساسية */
+:root {
+    --bg-main: #0B0E17;       /* خلفية الموقع الداكنة */
+    --card-bg: #121829;       /* خلفية البطاقات والأقسام */
+    --accent-color: #00E5FF;  /* لون النيون السماوي للعناصر البارزة */
+    --text-main: #E2E8F0;     /* لون النصوص الرئيسية */
+    --text-muted: #94A3B8;    /* لون النصوص الفرعية */
+    --border-color: #1E293B;  /* لون الحدود */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* شريط التنقل العلوي */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* القسم الرئيسي (Hero) */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 5%;
+    background: linear-gradient(135deg, #0b0e17 0%, #162032 100%);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* تنسيق الأقسام والبطاقات العامة */
+main, .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.card h3 {
+    color: var(--text-main);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* الجداول (مثل قسم التعليم) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--bg-main);
+    font-weight: bold;
+}
+
+td {
+    color: var(--text-muted);
+}
+
+tr:hover td {
+    color: var(--text-main);
+}
+
+/* القوائم والنقاط */
+ul {
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* نماذج الإدخال (Contact Form) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+button {
+    align-self: flex-start;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: var(--bg-main);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #00b4d8;
+    transform: translateY(-2px);
+}
+
+/* التذييل (Footer) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-bg);
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    margin-top: 50px;
+}
